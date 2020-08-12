@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material/mwc-list": "^0.18.0",
+    "@material/mwc-select": "^0.18.0",
     "@webcomponents/webcomponentsjs": "2.4.4",
     "history": "4.10.1",
     "react": "^16.13.1",

@@ -6,21 +6,28 @@ import * as serviceWorker from "./serviceWorker";
 import { createBrowserHistory } from "history";
 import SyntheticEventDemo from "./synthetic-event-demo/SyntheticEventDemo";
 import DeclarativeVsImperativeDemo from "./declarative-vs-imperative-demo/DeclarativeVsImperativeDemo";
+import UsingWebComponentsDemo from "./using-web-components-demo/UsingWebComponentsDemo";
 
 const history = createBrowserHistory({
   basename: "",
 });
 
 const ROUTES = {
-  SYNTHETIC_EVENT_DEMO: '/synthetic-event-demo',
-  DECLARATIVE_VS_IMPERATIVE_DEMO: '/declarative-vs-imperative-demo',
-  CSS_LEAK_DEMO: '/css-leak-demo',
-}
+  USING_WEB_COMPONENTS_DEMO: "/using-web-components-demo",
+  SYNTHETIC_EVENT_DEMO: "/synthetic-event-demo",
+  DECLARATIVE_VS_IMPERATIVE_DEMO: "/declarative-vs-imperative-demo",
+  CSS_LEAK_DEMO: "/css-leak-demo",
+};
 
 ReactDOM.render(
   <React.StrictMode>
     <Router history={history}>
       <Switch>
+        <Route
+          exact
+          path={ROUTES.USING_WEB_COMPONENTS_DEMO}
+          component={UsingWebComponentsDemo}
+        />
         <Route
           exact
           path={ROUTES.SYNTHETIC_EVENT_DEMO}
@@ -38,23 +45,21 @@ ReactDOM.render(
       <br />
       <React.Fragment>
         <div className="links">
-          <button
-            onClick={() => history.push(ROUTES.SYNTHETIC_EVENT_DEMO)}
-          >
+          <button onClick={() => history.push(ROUTES.USING_WEB_COMPONENTS_DEMO)}>
+            Using Web Components Demo
+          </button>
+          <div className="divider">&nbsp;</div>
+          <button onClick={() => history.push(ROUTES.SYNTHETIC_EVENT_DEMO)}>
             Synthetic Event Demo
           </button>
           <div className="divider">&nbsp;</div>
           <button
-            href={ROUTES.DECLARATIVE_VS_IMPERATIVE_DEMO}
             onClick={() => history.push(ROUTES.DECLARATIVE_VS_IMPERATIVE_DEMO)}
           >
             Declarative vs. Imperative Demo
           </button>
           <div className="divider">&nbsp;</div>
-          <button
-            href={ROUTES.CSS_LEAK_DEMO}
-            onClick={() => history.push(ROUTES.CSS_LEAK_DEMO)}
-          >
+          <button onClick={() => history.push(ROUTES.CSS_LEAK_DEMO)}>
             CSS Leak Demo
           </button>
         </div>
