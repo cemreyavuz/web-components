@@ -10,9 +10,11 @@
     "@vaadin/vaadin-grid": "^5.6.6",
     "@vaadin/vaadin-text-field": "^2.7.0-beta1",
     "@webcomponents/webcomponentsjs": "2.4.4",
+    "history": "^5.0.0",
     "react": "^16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.1",
+    "react-router-dom": "5.2.0",
+    "react-scripts": "^3.4.2",
     "vendor-copy": "2.0.0"
   },
   "scripts": {

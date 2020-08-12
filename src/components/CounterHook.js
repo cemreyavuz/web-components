@@ -26,8 +26,10 @@ export default () => {
       <NavBar title="Web Components + React = ❤️" />
       <Card title="Web Component Counters">
         <CounterBox>
-          <h5>Imperative Counter</h5>
-          <i-counter ref={counterElement}></i-counter>
+          <div onClick={() => { console.log('Clicked!'); }}>
+            <h5>Imperative Counter</h5>
+            <i-counter onClick={() => { console.log('i-counter clicked!'); }} ref={counterElement}></i-counter>
+          </div>
         </CounterBox>
         <CounterBox>
           <h5>Declarative Counter</h5>

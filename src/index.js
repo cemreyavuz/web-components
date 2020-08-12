@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, Switch } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { Router } from 'react-router-dom';
+import { createBrowserHistory } from 'history';
+import SyntheticEventDemo from './synthetic-event-demo/SyntheticEventDemo';
+
+const history = createBrowserHistory({
+  basename: '',
+});
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router history={history}>
+      <Switch>
+        <Route exact path="/synthetic-event-demo" component={SyntheticEventDemo} />
+        <App />
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

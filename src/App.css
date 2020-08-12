@@ -1,5 +1,10 @@
 html, body {
-  background-color: #aaa;
+  align-items: center;
+  background-color: #fafafa;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
 }
 
 h1, p {

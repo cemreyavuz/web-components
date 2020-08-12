@@ -1,9 +1,14 @@
 import React from "react";
-import "./App.css";
+import "./SyntheticEventDemo.css";
 
-const App = () => {
+import "./WebComponentWithDOMEvents";
+import "./WebComponentWithSyntheticEvents";
+
+const SyntheticEventDemo = () => {
   return (
-    <div>
+    <div className="synthetic-event-demo">
+      <h3>Synthetic Event Demo</h3>
+      <br />
       <h5>React Component with DOM events inside a Web Component</h5>
       <web-component-with-dom-events></web-component-with-dom-events>
       <hr />
@@ -13,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default SyntheticEventDemo;
