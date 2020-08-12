@@ -38,26 +38,25 @@ ReactDOM.render(
       <br />
       <React.Fragment>
         <div className="links">
-          <a
-            href={ROUTES.SYNTHETIC_EVENT_DEMO}
+          <button
             onClick={() => history.push(ROUTES.SYNTHETIC_EVENT_DEMO)}
           >
             Synthetic Event Demo
-          </a>
+          </button>
           <div className="divider">&nbsp;</div>
-          <a
+          <button
             href={ROUTES.DECLARATIVE_VS_IMPERATIVE_DEMO}
             onClick={() => history.push(ROUTES.DECLARATIVE_VS_IMPERATIVE_DEMO)}
           >
             Declarative vs. Imperative Demo
-          </a>
+          </button>
           <div className="divider">&nbsp;</div>
-          <a
+          <button
             href={ROUTES.CSS_LEAK_DEMO}
             onClick={() => history.push(ROUTES.CSS_LEAK_DEMO)}
           >
             CSS Leak Demo
-          </a>
+          </button>
         </div>
       </React.Fragment>
     </Router>

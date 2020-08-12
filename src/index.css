@@ -31,3 +31,20 @@ code {
   margin: 0 16px;
   width: 1px;
 }
+
+.links button {
+  background: inherit;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.links button:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.links button:focus {
+  outline: none;
+}
+
