@@ -8,6 +8,8 @@ import SyntheticEventDemo from "./synthetic-event-demo/SyntheticEventDemo";
 import DeclarativeVsImperativeDemo from "./declarative-vs-imperative-demo/DeclarativeVsImperativeDemo";
 import UsingWebComponentsDemo from "./using-web-components-demo/UsingWebComponentsDemo";
 
+import { applyPolyfills, defineCustomElements } from '@eusbolh/stencil-test-component/loader';
+
 const history = createBrowserHistory({
   basename: "",
 });
@@ -73,3 +75,7 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+applyPolyfills().then(() => {
+  defineCustomElements();
+});
