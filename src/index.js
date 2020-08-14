@@ -7,6 +7,8 @@ import { createBrowserHistory } from "history";
 import SyntheticEventDemo from "./synthetic-event-demo/SyntheticEventDemo";
 import DeclarativeVsImperativeDemo from "./declarative-vs-imperative-demo/DeclarativeVsImperativeDemo";
 import UsingWebComponentsDemo from "./using-web-components-demo/UsingWebComponentsDemo";
+import PassingNonScalarDataDemo from "./passing-non-scalar-data/PassingNonScalarDataDemo";
+import StencilVsPlainWebComponentDemo from "./stencil-vs-plain-web-component-demo/StencilVsPlainWebComponentDemo";
 
 import { applyPolyfills, defineCustomElements } from '@eusbolh/stencil-test-component/loader';
 
@@ -16,9 +18,10 @@ const history = createBrowserHistory({
 
 const ROUTES = {
   USING_WEB_COMPONENTS_DEMO: "/using-web-components-demo",
+  STENCIL_VS_PLAIN_WEB_COMPONENT_DEMO: "/stencil-vs-plain-web-component-demo",
+  PASSING_NON_SCALAR_DATA: "/passing-non-scalar-data-demo",
   SYNTHETIC_EVENT_DEMO: "/synthetic-event-demo",
   DECLARATIVE_VS_IMPERATIVE_DEMO: "/declarative-vs-imperative-demo",
-  CSS_LEAK_DEMO: "/css-leak-demo",
 };
 
 ReactDOM.render(
@@ -29,6 +32,16 @@ ReactDOM.render(
           exact
           path={ROUTES.USING_WEB_COMPONENTS_DEMO}
           component={UsingWebComponentsDemo}
+        />
+        <Route
+          exact
+          path={ROUTES.STENCIL_VS_PLAIN_WEB_COMPONENT_DEMO}
+          component={StencilVsPlainWebComponentDemo}
+        />
+        <Route
+          exact
+          path={ROUTES.PASSING_NON_SCALAR_DATA}
+          component={PassingNonScalarDataDemo}
         />
         <Route
           exact
@@ -51,6 +64,14 @@ ReactDOM.render(
             Using Web Components Demo
           </button>
           <div className="divider">&nbsp;</div>
+          <button onClick={() => history.push(ROUTES.STENCIL_VS_PLAIN_WEB_COMPONENT_DEMO)}>
+            Stencil vs Plain Web Component Demo
+          </button>
+          <div className="divider">&nbsp;</div>
+          <button onClick={() => history.push(ROUTES.PASSING_NON_SCALAR_DATA)}>
+            Passing Non Scalar Data Demo
+          </button>
+          <div className="divider">&nbsp;</div>
           <button onClick={() => history.push(ROUTES.SYNTHETIC_EVENT_DEMO)}>
             Synthetic Event Demo
           </button>
@@ -59,10 +80,6 @@ ReactDOM.render(
             onClick={() => history.push(ROUTES.DECLARATIVE_VS_IMPERATIVE_DEMO)}
           >
             Declarative vs. Imperative Demo
-          </button>
-          <div className="divider">&nbsp;</div>
-          <button onClick={() => history.push(ROUTES.CSS_LEAK_DEMO)}>
-            CSS Leak Demo
           </button>
         </div>
       </React.Fragment>

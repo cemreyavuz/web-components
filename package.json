@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@eusbolh/stencil-test-component": "0.0.1",
+    "@eusbolh/stencil-test-component": "0.0.2",
     "@material/mwc-list": "^0.18.0",
     "@material/mwc-select": "^0.18.0",
     "@webcomponents/webcomponentsjs": "2.4.4",

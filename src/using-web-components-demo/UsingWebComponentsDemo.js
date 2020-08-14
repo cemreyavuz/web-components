@@ -19,7 +19,10 @@ const UsingWebComponentsDemo = () => {
       </mwc-select>
       <hr />
       <h5>Stencil Web Component</h5>
-      <my-rating></my-rating>
+      <amount-input
+        label="Amount Input"
+        show-currency
+      />
     </div>
   );
 };
